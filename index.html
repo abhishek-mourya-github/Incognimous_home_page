@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incognimous Lab</title>
+    <link rel="shortcut icon" href="./image/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <nav
+        class="max-w-screen-2xl mx-auto h-20 flex items-center justify-between flex-wrap px-4 md:px-8 xl:px-28 lg:px-16">
+        <div class="flex items-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="240" height="40" viewBox="0 0 240 40" fill="none">
+                <path d="M59.4609 11.917V33.4234H64.408V11.917H59.4609Z" fill="#01487E"/>
+                <path d="M77.0316 17.6316C74.9909 17.6316 73.4449 18.369 72.6101 19.5057V18.0617H67.9722V33.4234H72.6101V25.0359C72.6101 22.8546 73.7851 21.8714 75.4856 21.8714C76.9698 21.8714 78.1756 22.7624 78.1756 24.6673V33.4234H82.8135V23.9913C82.8135 19.8437 80.1545 17.6316 77.0316 17.6316Z" fill="#01487E"/>
+                <path d="M93.4191 33.8536C96.4492 33.8536 99.0773 32.2867 100.407 29.8902L96.3564 27.586C95.8617 28.6613 94.7177 29.3065 93.3573 29.3065C91.3475 29.3065 89.8634 27.8625 89.8634 25.7426C89.8634 23.6227 91.3475 22.1787 93.3573 22.1787C94.7177 22.1787 95.8308 22.8239 96.3564 23.8992L100.407 21.5642C99.0773 19.1985 96.4183 17.6316 93.4191 17.6316C88.7194 17.6316 85.2255 21.1648 85.2255 25.7426C85.2255 30.3204 88.7194 33.8536 93.4191 33.8536Z" fill="#01487E"/>
+                <path d="M109.392 33.8536C113.937 33.8536 117.586 30.3204 117.586 25.7426C117.586 21.1648 113.937 17.6316 109.392 17.6316C104.847 17.6316 101.198 21.1648 101.198 25.7426C101.198 30.3204 104.847 33.8536 109.392 33.8536ZM109.392 29.3679C107.382 29.3679 105.836 27.9239 105.836 25.7426C105.836 23.5612 107.382 22.1172 109.392 22.1172C111.402 22.1172 112.948 23.5612 112.948 25.7426C112.948 27.9239 111.402 29.3679 109.392 29.3679Z" fill="#01487E"/>
+                <path d="M131.556 18.0617V19.6286C130.536 18.369 129.052 17.6316 127.042 17.6316C122.652 17.6316 119.436 21.1955 119.436 25.4353C119.436 29.6752 122.652 33.2391 127.042 33.2391C129.052 33.2391 130.536 32.5017 131.556 31.2421V32.6553C131.556 34.8367 130.227 35.9427 128.063 35.9427C126.022 35.9427 125.125 35.0825 124.538 34.0072L120.58 36.2807C122.002 38.8 124.692 39.9982 127.908 39.9982C132.02 39.9982 136.071 37.8169 136.071 32.6553V18.0617H131.556ZM127.815 28.9993C125.62 28.9993 124.074 27.5553 124.074 25.4353C124.074 23.3154 125.62 21.8714 127.815 21.8714C130.01 21.8714 131.556 23.3154 131.556 25.4353C131.556 27.5553 130.01 28.9993 127.815 28.9993Z" fill="#01487E"/>
+                <path d="M148.533 17.6316C146.492 17.6316 144.946 18.369 144.111 19.5057V18.0617H139.473V33.4234H144.111V25.0359C144.111 22.8546 145.286 21.8714 146.987 21.8714C148.471 21.8714 149.677 22.7624 149.677 24.6673V33.4234H154.315V23.9913C154.315 19.8437 151.655 17.6316 148.533 17.6316Z" fill="#01487E"/>
+                <path d="M159.818 16.7099C161.334 16.7099 162.601 15.4502 162.601 13.9448C162.601 12.4393 161.334 11.1797 159.818 11.1797C158.303 11.1797 157.036 12.4393 157.036 13.9448C157.036 15.4502 158.303 16.7099 159.818 16.7099ZM157.499 33.4234H162.137V18.0617H157.499V33.4234Z" fill="#01487E"/>
+                <path d="M182.846 17.6316C180.651 17.6316 179.229 18.4304 178.363 19.6593C177.497 18.369 176.137 17.6316 174.312 17.6316C172.241 17.6316 170.88 18.4304 170.169 19.475V18.0617H165.531V33.4234H170.169V24.7594C170.169 22.9468 171.035 21.8714 172.581 21.8714C174.065 21.8714 174.807 22.8546 174.807 24.3908V33.4234H179.445V24.7594C179.445 22.9468 180.311 21.8714 181.857 21.8714C183.341 21.8714 184.083 22.8546 184.083 24.3908V33.4234H188.721V23.9913C188.721 20.1509 186.402 17.6316 182.846 17.6316Z" fill="#01487E"/>
+                <path d="M199.312 33.8536C203.857 33.8536 207.506 30.3204 207.506 25.7426C207.506 21.1648 203.857 17.6316 199.312 17.6316C194.767 17.6316 191.118 21.1648 191.118 25.7426C191.118 30.3204 194.767 33.8536 199.312 33.8536ZM199.312 29.3679C197.302 29.3679 195.756 27.9239 195.756 25.7426C195.756 23.5612 197.302 22.1172 199.312 22.1172C201.322 22.1172 202.868 23.5612 202.868 25.7426C202.868 27.9239 201.322 29.3679 199.312 29.3679Z" fill="#01487E"/>
+                <path d="M220.116 18.0617V26.4492C220.116 28.6306 218.941 29.6137 217.24 29.6137C215.756 29.6137 214.55 28.7227 214.55 26.8179V18.0617H209.912V27.4938C209.912 31.6415 212.571 33.8536 215.694 33.8536C217.735 33.8536 219.281 33.1162 220.116 31.9794V33.4234H224.754V18.0617H220.116Z" fill="#01487E"/>
+                <path d="M232.395 22.5473C232.395 21.9943 232.889 21.6871 233.693 21.6871C234.714 21.6871 235.332 22.2401 235.765 23.0389L239.723 20.919C238.424 18.7376 236.198 17.6316 233.693 17.6316C230.478 17.6316 227.633 19.3214 227.633 22.6702C227.633 27.9854 235.239 27.0944 235.239 28.7842C235.239 29.3987 234.683 29.7366 233.57 29.7366C232.209 29.7366 231.343 29.0914 230.941 27.9239L226.922 30.1975C228.128 32.6861 230.478 33.8536 233.57 33.8536C236.909 33.8536 240.001 32.3481 240.001 28.8149C240.001 23.1311 232.395 24.2986 232.395 22.5473Z" fill="#01487E"/>
+                <path d="M45.2475 4.2139C45.2475 4.2139 40.1406 4.2139 32.9326 0C32.9326 0 28.626 3.14817 20.5317 4.16081C20.5785 5.7209 20.2619 7.27251 19.6023 8.71566C19.1138 9.72156 18.4589 10.655 17.6598 11.4841L17.4739 11.6699H8.19645C8.12391 11.6699 6.70044 11.5494 5.98417 12.5069C5.75843 12.8164 5.63213 13.176 5.61924 13.5461C5.59342 13.9819 5.72983 14.413 6.00684 14.7711C6.67098 15.602 7.82018 15.5306 7.90631 15.5245C8.72685 15.4571 9.58591 15.5245 10.3996 15.5245H12.9542C14.5205 15.5245 18.3058 15.5102 18.3058 15.5102C18.5798 15.5075 18.8456 15.5944 19.0539 15.7547C19.2623 15.9149 19.3991 16.1378 19.4391 16.3819C19.4531 16.5217 19.4353 16.6626 19.3868 16.796C19.3382 16.9294 19.2601 17.0525 19.157 17.1578C19.0539 17.2631 18.928 17.3483 18.7872 17.4083C18.6463 17.4684 18.4933 17.5019 18.3375 17.5069L13.2466 17.6334C12.7508 17.702 12.3012 17.9345 11.9854 18.2855C11.6696 18.6365 11.5103 19.0809 11.5386 19.532C11.5669 19.9831 11.7808 20.4085 12.1385 20.7252C12.4962 21.0419 12.972 21.2273 13.4733 21.2451C15.7399 21.2287 20.577 21.2022 20.577 21.2022C20.7514 21.1844 20.9281 21.2 21.0954 21.2479C21.2627 21.2958 21.4169 21.3751 21.5478 21.4804C21.6788 21.5857 21.7835 21.7148 21.8553 21.8591C21.927 22.0035 21.9641 22.1598 21.9641 22.3179C21.9641 22.4761 21.927 22.6324 21.8553 22.7767C21.7835 22.9211 21.6788 23.0501 21.5478 23.1555C21.4169 23.2608 21.2627 23.34 21.0954 23.388C20.9281 23.4359 20.7514 23.4515 20.577 23.4337L2.17843 23.3908C1.88433 23.3869 1.59246 23.4374 1.32095 23.5393C1.04944 23.6412 0.80407 23.7923 0.60008 23.9832C0.396091 24.174 0.23783 24.4006 0.13512 24.6489C0.0324097 24.8971 -0.0125579 25.1618 0.00300795 25.4263C0.0185738 25.6909 0.0943407 25.9497 0.225607 26.1868C0.356873 26.4239 0.540836 26.6342 0.76608 26.8046C0.991324 26.9749 1.25304 27.1018 1.53499 27.1773C1.81694 27.2528 2.1131 27.2752 2.4051 27.2433L23.8501 27.1433C24.1264 27.1629 24.3844 27.2756 24.5725 27.4589C24.7607 27.6423 24.8652 27.8828 24.8652 28.1325C24.8652 28.3821 24.7607 28.6226 24.5725 28.806C24.3844 28.9893 24.1264 29.102 23.8501 29.1216C20.9646 29.0706 15.1869 29.2747 15.1869 29.2747C14.6728 29.2241 14.1562 29.3474 13.7374 29.6205C13.3185 29.8936 13.0273 30.2972 12.9202 30.7529C12.8739 31.0115 12.8867 31.2759 12.9577 31.53C13.0287 31.784 13.1564 32.0224 13.3331 32.2305C13.5098 32.4385 13.7318 32.612 13.9854 32.7402C14.2391 32.8684 14.5191 32.9487 14.8083 32.9762H29.2312L32.6312 36.1734H32.9598C39.7258 31.1632 45.5263 22.5946 48.4707 11.2126C48.4435 11.2146 45.3359 10.1101 45.2475 4.2139ZM37.3322 17.0638C37.0812 17.3581 36.935 17.714 36.9129 18.0846C36.8744 19.9364 36.8993 21.784 36.8948 23.6358C36.8948 25.9122 35.0814 27.6864 32.7876 27.6925C30.4937 27.6986 28.7076 25.9796 28.6577 23.7379C28.6396 22.8151 28.6577 21.9004 28.6577 20.9654C28.6577 20.5693 28.6577 20.1732 28.6577 19.7771C28.7008 18.4664 28.592 17.3272 27.5924 16.1676C25.8357 14.1259 26.0487 11.1064 27.7057 8.95657C28.464 7.96527 29.5588 7.22224 30.8257 6.83903C32.0927 6.45581 33.4635 6.45308 34.7324 6.83125C37.3096 7.62544 39.1184 9.96309 39.1478 12.609C39.1686 14.2441 38.5225 15.8292 37.3322 17.0638Z" fill="#01487E"/>
+                <path d="M36.4884 13.1369C36.0708 11.6984 34.7298 10.6952 33.2415 10.6431C31.7203 10.5869 30.3353 11.4998 29.7704 12.9282C29.5191 13.6062 29.4866 14.3357 29.6768 15.0301C29.867 15.7244 30.2719 16.3542 30.8431 16.8445C31.0652 17.0653 31.1992 17.348 31.2235 17.647C31.274 18.4495 31.241 19.252 31.241 20.0545V22.462C31.241 22.5021 31.241 22.5443 31.241 22.5844C31.2938 23.7541 32.1424 24.5445 33.2679 24.4663C34.2242 24.4021 34.9386 23.5895 34.9474 22.4901C34.965 20.865 34.9474 19.2359 34.9672 17.6089C34.9872 17.3285 35.1122 17.0629 35.3211 16.8565C36.4665 15.8393 36.9171 14.6095 36.4884 13.1369ZM35.4618 14.8803C35.1387 14.7238 34.8155 14.5653 34.4748 14.4028C34.6682 13.6946 34.6375 13.0606 33.9494 12.6353C33.7439 12.4876 33.4899 12.4072 33.2283 12.4072C32.9667 12.4072 32.7128 12.4876 32.5073 12.6353C31.8852 13.0606 31.6763 13.6505 32.0039 14.3968L31.008 14.8783C30.7318 14.3975 30.6327 13.8482 30.7253 13.312C30.818 12.7757 31.0975 12.2809 31.5224 11.901C31.962 11.5088 32.5479 11.2829 33.1624 11.2687C33.777 11.2546 34.3747 11.4532 34.8353 11.8248C35.2889 12.2031 35.5953 12.7058 35.7083 13.257C35.8213 13.8082 35.7348 14.3779 35.4618 14.8803Z" fill="#01487E"/>
+              </svg>
+        </div>
+        <div class="block lg:hidden">
+            <button id="nav-toggle"
+                class="flex items-center rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-6 w-6 text-black" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+            <div class="text-sm lg:flex-grow lg:flex lg:items-center lg:justify-end lg:gap-6 xl:gap-10">
+                <a href="#responsive-header"
+                    class="block font-[roboto] mt-4 lg:inline-block lg:mt-0  lg:text-blue-900  lg:text-base lg:font-normal">
+                    Service
+                </a>
+                <a href="#responsive-header"
+                    class="block font-[roboto] mt-4 lg:inline-block lg:mt-0  lg:text-blue-900  lg:text-base lg:font-normal">
+                    Work
+                </a>
+                <a href="#responsive-header" class="block font-[roboto] mt-4 lg:inline-block lg:mt-0  lg:text-blue-900  lg:text-base lg:font-normal">
+                    Process
+                </a>
+                <a href="#responsive-header" class="block font-[roboto] mt-4 lg:inline-block lg:mt-0 lg:text-blue-900  lg:text-base lg:font-normal">
+                    Resources
+                </a>
+                <button class="lg:flex xl:py-4 xl:px-8 lg:py-4 lg:px-6 lg:justify-center lg:items-center lg:gap-10 lg:text-blue-900 lg:text-base lg:font-normal lg:leading-none lg:rounded-lg lg:border lg:border-blue-900 font-[roboto]">CONTACT US</button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="overlay-menu" class="fixed top-0 left-0 w-full h-full bg-blue-900 z-50 hidden">
+        <div class="flex justify-end">
+            <button id="close-overlay"
+                class="flex items-center px-3 py-2 rounded text-gray-200 border-gray-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-12 w-12 mt-2 ml-2 text-white" viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <title>Close</title>
+                    <path
+                        d="M6.707 6.293a1 1 0 011.414 0L10 8.586l2.879-2.88a1 1 0 111.414 1.414L11.414 10l2.88 2.879a1 1 0 11-1.414 1.414L10 11.414l-2.879 2.88a1 1 0 01-1.414-1.414L8.586 10 5.707 7.121a1 1 0 010-1.414z" />
+                </svg>
+            </button>
+        </div>
+        <div class="flex justify-center h-full">
+            <div class="text-center">
+                <a href="#responsive-header" class=" font-[roboto] text-2xl block mt-24 text-gray-200 hover:text-white">
+                    Service
+                </a>
+                <a href="#responsive-header" class="text-2xl font-[roboto]  block mt-8 text-gray-200 hover:text-white">
+                    Work
+                </a>
+                <a href="#responsive-header" class="text-2xl font-[roboto]  block mt-8 text-gray-200 hover:text-white">
+                    Process
+                </a>
+                <a href="#responsive-header" class="text-2xl font-[roboto]  block mt-8 text-gray-200 hover:text-white">
+                    Resources
+                </a>
+                <button
+                    class="flex p-4 px-8 mt-20 justify-center text-white items-center gap-10 text-blue-900 rounded-lg border border-white text-base font-normal leading-none mt-8 font-[roboto]">CONTACT
+                    US</button>
+            </div>
+        </div>
+    </div>
+
+    <header
+        class="max-w-screen-2xl mx-auto min-h-96 lg:flex lg:items-center lg:justify-center pt-10 lg:min-h-96 lg:py-24 lg:pl-28 xl:pl-56">
+
+        <div class="lg:h-84 lg:w-full lg:flex lg:items-center lg:justify-center">
+            <div
+                class="small-box w-full h-full flex flex-col lg:flex lg:items-center lg:justify-center lg:flex-row-reverse ">
+                <div class="w-full h-2/4  flex items-center justify-center mt-4 lg:w-2/4 lg:h-full lg:ml-20">
+                    <img class="md:h-80 lg:h-[18rem] xl:h-[20rem]" src="./image/page1-image1.png" alt="">
+                </div>
+                <div
+                    class="w-screen h-2/4  mt-10 px-3 md:flex md:flex-col md:items-center md:px-8 lg:w-2/4 lg:h-full lg:flex lg:items-start">
+                    <div class="h-24 w-full mt-4">
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">DESIGN &</h1>
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">DEVELOPMENT</h1>
+                    </div>
+                    <p class="w-full h-20 font-[roboto] text-base font-normal mt-10 md:text-lg lg:text-base xl:text-lg">Lorem ipsum dolor
+                        sit amet, elit, sed
+                        do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                    <button style="background: #01487E;"
+                        class="flex w-full lg:w-40  p-5 justify-center items-center gap-4 rounded-xl mt-10 text-white text-base lg:text-sm md:text-lg font-normal leading-none cursor-pointer lg:flex lg:p-4 lg:justify-center lg:items-center lg:gap-10 font-[roboto]">GET
+                        IN TOUCH</button>
+                </div>
+            </div>
+            <div
+                class="small-box w-full h-full flex flex-col lg:flex lg:items-center lg:justify-center lg:flex-row-reverse ">
+                <div class="w-full h-2/4  flex items-center justify-center mt-4 lg:w-2/4 lg:h-full lg:ml-20">
+                    <img class="md:h-80 lg:h-[18rem] xl:h-[20rem]" src="./image/page1-image2.png" alt="">
+                </div>
+                <div
+                    class="w-screen h-2/4  mt-10 px-3 md:flex md:flex-col md:items-center md:px-8 lg:w-2/4 lg:h-full lg:flex lg:items-start">
+                    <div class="h-24 w-full mt-4">
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">PREVENTING</h1>
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">CYBER THREATS</h1>
+                    </div>
+                    <p class="w-full h-20 font-[roboto] text-base font-normal mt-10 md:text-lg lg:text-base xl:text-lg">Lorem ipsum dolor
+                        sit amet, elit, sed
+                        do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                    <button style="background: #01487E;"
+                    class="flex w-full lg:w-40  p-5 justify-center items-center gap-4 rounded-lg rounded-xl mt-10 text-white text-base lg:text-sm md:text-lg font-normal leading-none cursor-pointer lg:flex lg:p-4 lg:justify-center lg:items-center lg:gap-10 font-[roboto]">GET
+                    IN TOUCH</button>
+                </div>
+            </div>
+            <div
+                class="small-box w-full h-full flex flex-col lg:flex lg:items-center lg:justify-center lg:flex-row-reverse ">
+                <div class="w-full h-2/4  flex items-center justify-center mt-4 lg:w-2/4 lg:h-full lg:ml-20">
+                    <img class="md:h-80 lg:h-[18rem] xl:h-[20rem]" src="./image/page1-image3.png" alt="">
+                </div>
+                <div
+                    class="w-screen h-2/4  mt-10 px-3 md:flex md:flex-col md:items-center md:px-8 lg:w-2/4 lg:h-full lg:flex lg:items-start">
+                    <div class="h-24 w-full mt-4">
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">OPERATING &</h1>
+                        <h1 class="text-5xl font-[roboto] font-bold lg:text-5xl xl:text-6xl">MAINTAINING</h1>
+                    </div>
+                    <p class="w-full h-20 font-[roboto] text-base font-normal mt-10  md:text-lg lg:text-base xl:text-lg">Lorem ipsum dolor
+                        sit amet, elit, sed
+                        do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam,
+                    </p>
+                    <button style="background: #01487E;"
+                        class="flex w-full lg:w-40  p-5 justify-center items-center gap-4 rounded-lg rounded-xl mt-10 text-white text-base lg:text-sm md:text-lg font-normal leading-none cursor-pointer lg:flex lg:p-4 lg:justify-center lg:items-center lg:gap-10 font-[roboto]">GET
+                        IN TOUCH</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="client">
+        <div
+            class="page2 md:bg-gray-100 max-w-screen-2xl mx-auto h-auto  mt-8 sm:h-36 md:h-48 lg:h-56 sm:flex sm:items-center sm:justify-center md:flex md:items-center md:justify-center md:mt-8  overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden">
+            <div
+                class="grid grid-cols-2 p-8 gap-5 sm:flex sm:justify-center sm:items-center sm:grid-cols-2 md:grid-cols-4 md:p-5 transition-all duration-500 ease-in-out md:px-8 lg:flex lg:items-center lg:justify-center xl:px-48 lg:px-28">
+                <img class="h-12 lg:h-16" src="./image/gla.png" alt="">
+                <img class="h-12 md:mr-8 lg:ml-8 lg:h-16" src="./image/DU_Logo 2.png" alt="">
+                <img class="h-12 md:ml-4 lg:h-16" src="./image/LPU.png" alt="">
+                <img class="h-12 lg:h-16" src="./image/Jaipuria_Institute_of_management.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div
+            class="page3 max-w-screen-2xl mx-auto min-h-96  my-16 py-5 md:min-h-80 md:my-10 lg:min-h-96 xl:px-48 lg:px-28 overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden lg:mt-28 lg:mb-28">
+            <div class="flex flex-col text-center">
+                <h2
+                    class="text-center font-[roboto] text-[1.8rem] lg:text-[2.5rem] lg:font-bold  leading-tight md:text-4xl md:font-semibold">
+                    We have
+                    Experience, That <br> Matter’s a lot!
+                </h2>
+                <p class="text-center font-[roboto] text-[0.9rem] lg:text-base font-normal leading-relaxed text-gray-600 mt-4 px-8">
+                    United by the
+                    team,
+                    concert on risk factors to reduce the <br> sympotomus</p>
+            </div>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 justify-items-center items-center transition-all duration-500 ease-in-out mt-10 md:flex md:items-center md:justify-center lg:hidden">
+                <div
+                    class="h-28 w-80 text-center flex items-center justify-around border-b-2 border-blue-900 md:border-none">
+                    <div class="md:border-r-2 md:border-black md:pr-4">
+                        <h2 style="color: #01487E;" class="text-4xl lg:text-5xl font-semibold leading-none font-[roboto]">100+</h2>
+                        <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Training Sessions</h3>
+                    </div>
+                    <div class="md:border-r-2 md:border-black md:pr-4 ">
+                        <h2 style="color: #01487E;" class="text-4xl lg:text-5xl font-semibold leading-none font-[roboto]">10+</h2>
+                        <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Team Members</h3>
+                    </div>
+                </div>
+                <div class="h-28 w-80 text-center flex items-center justify-around">
+                    <div class="md:border-r-2 md:border-black md:pr-4">
+                        <h2 style="color: #01487E;" class="text-4xl lg:text-5xl font-semibold leading-none font-[roboto]">5+</h2>
+                        <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Years of Experience</h3>
+                    </div>
+                    <div>
+                        <h2 style="color: #01487E;" class="text-4xl lg:text-5xl font-semibold leading-none font-[roboto]">15+</h2>
+                        <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Project Completed</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden sm:hidden md:hidden lg:block lg:flex lg:items-center lg:justify-center mt-16">
+                <div
+                    class="w-80 h-32  border-r-2 border-blue-900 flex flex-col items-center justify-center">
+                    <h2 class="text-4xl lg:text-5xl font-semibold leading-none text-blue-900 font-[roboto]">100+</h2>
+                    <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Training Sessions</h3>
+                </div>
+                <div
+                    class="w-80 h-32  border-r-2 border-blue-900 flex flex-col items-center justify-center">
+                    <h2 class="text-4xl lg:text-5xl font-semibold leading-none text-blue-900 font-[roboto]">10+</h2>
+                    <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Team Members</h3>
+                </div>
+                <div
+                    class="w-80 h-32  border-r-2 border-blue-900 flex flex-col items-center justify-center">
+                    <h2 class="text-4xl lg:text-5xl font-semibold leading-none text-blue-900 font-[roboto]">5+</h2>
+                    <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Years of Experience</h3>
+                </div>
+                <div class="w-80 h-32 flex flex-col items-center justify-center">
+                    <h2 class="text-4xl lg:text-5xl font-semibold leading-none text-blue-900 font-[roboto]">15+</h2>
+                    <h3 class="text-base font-normal leading-normal text-black mt-2 font-[roboto]">Project Completed</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="work-card">
+        <div
+            class="page4 max-w-screen-2xl mx-auto min-h-screen  overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden mb-4 md:mx-4">
+            <div class="w-full h-12 flex items-center justify-between px-4 md:px-4 xl:px-48 lg:px-28">
+                <h2 class="text-black font-bold text-3xl leading-none md:font-bold md:text-4xl font-[roboto]">Latest Work</h2>
+                <button
+                    class="flex justify-evenly  w-32 md:w-40 h-full items-center gap-4 text-black text-base md:text-xl font-normal leading-tight border border-black rounded-3xl px-4">
+                    <img class="md:h-8 font-[roboto]" src="./image/arrow-right.jpg" alt="">Explore</button>
+            </div>
+            <div class="mx-4 grid gap-4 sm:grid-cols-12 grid-cols-1 mt-12 lg:mt-20 xl:mx-48 lg:mx-28 lg:gap-8">
+                <div style="background-image:url(./image/top-left-image.png); background-position: center; background-repeat: no-repeat; background-size: cover;"
+                    class="lg:cursor-pointer lg:hover:transform lg:hover:scale-105 lg:transition-transform duration-500 h-56 lg:h-80 shadow sm:col-span-4 md:col-span-6 lg:col-span-7 rounded-2xl overflow-hidden relative">
+                    <div class="absolute left-6 top-2/3">
+                        <h2 class="text-white font-bold text-3xl leading-none mb-2 font-[roboto]">Heading</h2>
+                        <h3 class="text-white text-base font-normal leading-none lg:pt-2 font-[roboto]">Service Category</h3>
+                    </div>
+                </div>
+                <div style="background-image:url(./image/top-left-image.png); background-position: center; background-repeat: no-repeat; background-size: cover;"
+                    class="lg:cursor-pointer lg:hover:transform lg:hover:scale-105 lg:transition-transform duration-500 h-56 lg:h-80 bg-teal-500 shadow sm:col-span-8 md:col-span-6 lg:col-span-5 rounded-2xl overflow-hidden relative">
+                    <div class="absolute left-6 top-2/3">
+                        <h2 class="text-white font-bold text-3xl leading-none mb-2 font-[roboto]">Heading</h2>
+                        <h3 class="text-white text-base font-normal leading-none lg:pt-2 font-[roboto]">Service Category</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="mx-4 grid gap-4 mt-4 sm:grid-cols-12 grid-cols-1 lg:mt-8 lg:mb-4 xl:mx-48 lg:mx-28 lg:gap-8">
+                <div style="background-image:url(./image/top-left-image.png); background-position: center; background-repeat: no-repeat; background-size: cover;"
+                    class="lg:cursor-pointer lg:hover:transform lg:hover:scale-105 lg:transition-transform duration-500 h-56 lg:h-80 bg-teal-500 shadow sm:col-span-8 md:col-span-6 lg:col-span-5 rounded-2xl overflow-hidden relative">
+                    <div class="absolute left-6 top-2/3">
+                        <h2 class="text-white font-bold text-3xl leading-none mb-2 font-[roboto]">Heading</h2>
+                        <h3 class="text-white text-base font-normal leading-none lg:pt-2 font-[roboto]">Service Category</h3>
+                    </div>
+                </div>
+                <div style="background-image:url(./image/top-left-image.png); background-position: center; background-repeat: no-repeat; background-size: cover;"
+                    class="lg:cursor-pointer lg:hover:transform lg:hover:scale-105 lg:transition-transform duration-500 h-56 lg:h-80 shadow sm:col-span-4 md:col-span-6 lg:col-span-7 rounded-2xl overflow-hidden relative">
+                    <div class="absolute left-6 top-2/3">
+                        <h2 class="text-white font-bold text-3xl leading-none mb-2 font-[roboto]">Heading</h2>
+                        <h3 class="text-white text-base font-normal leading-none lg:pt-2 font-[roboto]">Service Category</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="field">
+        <div
+            class="page5 max-w-screen-2xl mx-auto min-h-screen overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden xl:px-48 lg:px-40 lg:mt-20 xl:mt-28 lg:min-h-70">
+            <div class="xl:w-4/5">
+                <h2 class="text-black font-bold text-3xl px-6 pt-4 leading-none md:text-4xl md:px-8 lg:px-0 lg:text-4xl font-[roboto]">Our
+                    Service</h2>
+                <p class="text-gray-600 text-base px-6 font-normal leading-tight mt-4 md:px-8 lg:px-0 font-[roboto]" >Lorem ipsum dolor sit
+                    amet,
+                    consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="w-full min-h-96 mt-10 md:flex md:px-4 lg:hidden xl:hidden">
+                <div class="md:w-2/4 md:pr-4">
+                    <div class="flex gap-10 px-6 pt-8">
+                        <h3
+                            class="text-black font-semibold text-xl leading-tight border-b-4 md:text-lg">
+                            Design &
+                            Development</h3>
+                        <h3 class="text-black font-semibold text-xl leading-tight md:text-lg font-[roboto]">Devops</h3>
+                    </div>
+                    <p class="text-gray-600 text-base font-normal leading-tight px-6 pt-8 font-[roboto]"> Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                    <div>
+                        <div class="flex items-center pl-6 pt-10">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">UI/UX Design</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">Web Development</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">App Development</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center mt-10 mx-6 mx-auto md:w-2/4">
+                    <img src="./image/field-1.png" alt="">
+                </div>
+            </div>
+            <div class="w-full min-h-96  mt-10 md:flex md:px-4 lg:hidden xl:hidden">
+                <div class="md:w-2/4 md:pr-4">
+                    <div class="flex gap-10 px-6 pt-8">
+                        <h3
+                            class="text-black font-semibold text-xl leading-tight border-b-4 md:text-lg">
+                            Devops</h3>
+                        <h3 class="text-black font-semibold text-xl leading-tight md:text-lg font-[roboto]">Cyber Security</h3>
+                    </div>
+                    <p class="text-gray-600 text-base font-normal leading-tight px-6 pt-8 font-[roboto]"> Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                    <div>
+                        <div class="flex items-center pl-6 pt-10">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">UI/UX Design</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">Web Development</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">App Development</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center mt-10 mx-6 mx-auto md:w-2/4">
+                    <img src="./image/field-2.png" alt="">
+                </div>
+            </div>
+            <div class="w-full min-h-96 mt-10 md:flex md:px-4 lg:hidden xl:hidden">
+                <div class="md:w-2/4 md:pr-4">
+                    <div class="flex gap-10 px-6 pt-8">
+                        <h3
+                            class="text-black font-semibold text-xl leading-tight border-b-4 md:text-lg font-[roboto]">
+                            Cyber Security</h3>
+                    </div>
+                    <p class="text-gray-600 text-base font-normal leading-tight px-6 pt-8 font-[roboto]"> Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. </p>
+                    <div>
+                        <div class="flex items-center pl-6 pt-10">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">UI/UX Design</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div> 
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">Web Development</h3>
+                        </div>
+                        <div class="flex items-center pl-6 pt-6">
+                            <div style="background: #01487E;" class="w-20 h-1 flex-shrink-0"></div>
+                            <h3 class="text-black text-base font-normal leading-tight pl-8 font-[roboto]">App Development</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center mt-10 mx-6 mx-auto md:w-2/4">
+                    <img src="./image/field-3.png" alt="">
+                </div>
+            </div>
+
+            <div
+                class="lg:w-full lg:min-h-96 lg:mt-12 xl:mt-20 hidden sm:hidden md:hidden lg:block xl:block">
+                <div class="lg:flex xl:flex lg:gap-10 xl:gap-20">
+                    <h2 id="tab"
+                        class="design font-[roboto] cursor-pointer text-black text-2xl xl:text-3xl font-semibold leading-relaxed border-b-4 border-blue-300 lg:pb-1 xl:pb-2 group">
+                        Design & Development</h2>
+                    <h2 id="tab"
+                        class="devops font-[roboto] cursor-pointer text-black text-2xl xl:text-3xl font-semibold leading-relaxed border-b-4 border-blue-300 lg:pb-1 xl:pb-2 group">
+                        DevOps</h2>
+                    <h2 id="tab"
+                        class="cyber font-[roboto] cursor-pointer text-black text-2xl xl:text-3xl font-semibold leading-relaxed border-b-4 border-blue-300 lg:pb-1 xl:pb-2 group">
+                        Cyber Security</h2>
+                </div>
+                <div id="design" class="change lg:w-full lg:flex lg:justify-between lg:items-center lg:mt-10 xl:mt-12">
+                    <div class="lg:min-w-96 xl:min-w-96 lg:h-72 xl:h-80 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 lg:text-base xl:text-lg xl:w-4/5 font-normal leading-relaxed font-[roboto]">Lorem
+                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. </p>
+                        </div>
+                        <div class="flex flex-col gap-4 lg:gap-2 xl:gap-4">
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">UI/UX Design</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">Web Development</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">App Development</h3>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <button
+                                class="flex lg:hover lg:cursor-pointer items-center justify-center lg:w-36 xl:w-40 lg:h-10 xl:h-10 xl:rounded-3xl flex-shrink-0 rounded-2xl border border-black text-black font-roboto text-base font-normal leading-relaxed font-[roboto]"><img
+                                    src="./image/arrow-right.jpg" alt="">Explore more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:min-w-72 xl:min-w-96 lg:h-72 xl:h-80  flex items-center justify-center">
+                        <img src="./image/field-1.png" alt="">
+                    </div>
+                </div>
+                <div id="devops" class="change lg:flex lg:justify-between lg:items-center lg:mt-20 lg:hidden xl:hidden lg:mt-10 xl:mt-12">
+                    <div class="lg:min-w-96 xl:min-w-96 lg:h-72 xl:h-80 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 lg:text-base xl:text-lg xl:w-4/5 font-normal leading-relaxed font-[roboto]">Lorem
+                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. </p>
+                        </div>
+                        <div class="flex flex-col gap-4 lg:gap-2 xl:gap-4">
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">Development</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">App Development</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">UI/UX Design</h3>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <button
+                                class="flex items-center justify-center lg:hover lg:cursor-pointer lg:w-36 xl:w-40 lg:h-8 xl:h-10 xl:rounded-3xl flex-shrink-0 rounded-2xl border border-black text-black font-roboto text-base font-normal leading-relaxed font-[roboto]"><img
+                                    src="./image/arrow-right.jpg" alt="">Explore more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:min-w-72 xl:min-w-96 lg:h-72 xl:h-80 flex items-center justify-center">
+                        <img src="./image/field-2.png" alt="">
+                    </div>
+                </div>
+                <div id="cyber" class="change lg:flex lg:justify-between lg:items-center lg:mt-20 lg:hidden xl:hidden lg:mt-10 xl:mt-12">
+                    <div class="lg:min-w-96 xl:min-w-96 lg:h-72 xl:h-80 flex flex-col justify-between">
+                        <div>
+                            <p class="text-gray-600 lg:text-base xl:text-lg xl:w-4/5 font-normal leading-relaxed font-[roboto]">Lorem
+                                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua. </p>
+                        </div>
+                        <div class="flex flex-col gap-4 lg:gap-2 xl:gap-4">
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">App Development</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">UI/UX Design</h3>
+                            </div>
+                            <div class="flex items-center lg:gap-4 xl:gap-8">
+                                <div style="background: #01487E;" class="w-12 h-1"></div>
+                                <h3 class="xl:text-base font-[roboto]">Web Development</h3>
+                            </div>
+                        </div>
+                        <div class="flex mb-4">
+                            <button
+                                class="flex items-center justify-center lg:hover lg:cursor-pointer lg:w-36 xl:w-40 lg:h-8 xl:h-10 xl:rounded-3xl flex-shrink-0 rounded-2xl border border-black text-black font-roboto text-base font-normal leading-relaxed font-[roboto]"><img
+                                    src="./image/arrow-right.jpg" alt="">Explore more</button>
+                        </div>
+                    </div>
+                    <div
+                        class="lg:min-w-72 xl:min-w-96 lg:h-72 xl:h-80flex items-center justify-center">
+                        <img src="./image/field-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="page6 w-full min-h-screen mt-28 mb-28 lg:mb-2 xl:mb-10 xl:px-48 lg:px-40 xl:mt-10">
+            <div class="text-center">
+                <h2 class="text-center text-[2rem] font-bold leading-10 xl:text-4xl font-[roboto]">Process that makes <br> work
+                    efficient</h2>
+                <p class="text-gray-600 text-center text-base font-normal leading-6 font-[roboto] mt-6 px-8">United by the team,
+                    concert on
+                    risk factors to reduce the <br>sympotomus
+                </p>
+            </div>
+            <div
+                class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-5 mx-8 mt-8 gap-6 lg:mt-20 lg:gap-40">
+                <div class="lg:flex lg:items-start lg:flex-col">
+                    <div
+                        class="flex items-center lg:flex-start lg:flex lg:items-center lg:flex-col xl:flex xl:items-center xl:flex-col">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <circle cx="12" cy="12.6526" r="6" fill="#81C8FE" />
+                                <circle cx="12" cy="12.6526" r="11.5" stroke="black" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-300 text-5xl font-bold leading-10 tracking-tight pl-8 lg:pl-0 lg:mt-12">1.</h2>
+                        </div>
+                    </div>
+                    <div class="ml-14 lg:flex lg:flex-col lg:items-start lg:ml-0">
+                        <div>
+                            <h3 class="text-gray-900 text-[1.6rem] lg:text-2xl xl:text-3xl font-medium leading-7 tracking-tight mt-4 font-[roboto]">Discovery
+                            </h3>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Idea</h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Data Analysis
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">UX Research
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:items-start lg:flex-col">
+                    <div
+                        class="flex items-center lg:flex lg:items-center lg:flex-col xl:flex xl:items-center xl:flex-col">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <circle cx="12" cy="12.6526" r="6" fill="#81C8FE" />
+                                <circle cx="12" cy="12.6526" r="11.5" stroke="black" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-300 text-5xl font-bold leading-10 tracking-tight pl-8 lg:pl-0 lg:mt-12">2.</h2>
+                        </div>
+                    </div>
+                    <div class="ml-14 lg:ml-0">
+                        <div>
+                            <h3 class="text-gray-900 text-[1.7rem] lg:text-2xl xl:text-3xl font-medium leading-7 tracking-tight mt-4 font-[roboto]">Design</h3>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">User Flow
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Wireframing
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">UI Design
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Client
+                                Feedback</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:items-start lg:flex-col">
+                    <div
+                        class="flex items-center lg:flex lg:items-center lg:flex-col xl:flex xl:items-center xl:flex-col">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <circle cx="12" cy="12.6526" r="6" fill="#81C8FE" />
+                                <circle cx="12" cy="12.6526" r="11.5" stroke="black" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-300 text-5xl font-bold leading-10 tracking-tight pl-8 lg:pl-0 lg:mt-12">3.</h2>
+                        </div>
+                    </div>
+                    <div class="ml-14 lg:ml-0">
+                        <div>
+                            <h3 class="text-gray-900 text-[1.7rem] lg:text-2xl xl:text-3xl font-medium leading-7 tracking-tight mt-4 font-[roboto]">
+                                Development</h3>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Coding</h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">DB Design
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Debugging
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:items-start lg:flex-col">
+                    <div
+                        class="flex items-center lg:flex lg:items-center lg:flex-col xl:flex xl:items-center xl:flex-col ">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <circle cx="12" cy="12.6526" r="6" fill="#81C8FE" />
+                                <circle cx="12" cy="12.6526" r="11.5" stroke="black" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-300 text-5xl font-bold leading-10 tracking-tight pl-8 lg:pl-0 lg:mt-12">4.</h2>
+                        </div>
+                    </div>
+                    <div class="ml-14 lg:ml-0">
+                        <div>
+                            <h3 class="text-gray-900 text-[1.7rem] lg:text-2xl xl:text-3xl font-medium leading-7 tracking-tight mt-4 font-[roboto]">Testing
+                            </h3>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Usability
+                            </h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Load</h3>
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Device</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:flex lg:items-start lg:flex-col">
+                    <div
+                        class="flex items-center lg:flex lg:items-center lg:flex-col xl:flex xl:items-center xl:flex-col">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"
+                                fill="none">
+                                <circle cx="12" cy="12.6526" r="6" fill="#81C8FE" />
+                                <circle cx="12" cy="12.6526" r="11.5" stroke="black" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="text-gray-300 text-5xl font-bold leading-10 tracking-tight pl-8 lg:pl-0 lg:mt-12">5.</h2>
+                        </div>
+                    </div>
+                    <div class="ml-14 lg:ml-0">
+                        <div>
+                            <h3 class="text-gray-900 text-[1.7rem] lg:text-2xl xl:text-3xl font-medium leading-7 tracking-tight mt-4 font-[roboto]">
+                                Deployement</h3>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="text-gray-900 text-[1.1rem] font-normal leading-8 tracking-tighter font-[roboto]">Release</h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div
+            class="page7 max-w-screen-2xl mx-auto min-h-screen lg:min-h-80 mt-10 md:px-8 xl:mx-40 lg:mx-20">
+            <div class="w-full h-12 px-8 flex items-center justify-between md:px-4">
+                <h2 class="text-black font-bold text-3xl xl:text-4xl leading-none font-[roboto]">Blog</h2>
+                <button
+                    class="flex items-center justify-evenly  w-32 md:w-40 h-full gap-4 text-black text-base md:text-xl font-normal leading-tight border border-black rounded-3xl px-4 font-[roboto]">
+                    <img class="md:h-8" src="./image/arrow-right.jpg" alt="">Explore</button>
+            </div>
+            <div
+                class=" grid gap-2 sm:grid-cols-3 grid-cols-1 md:grid-cols-2 md:place-items-center lg:grid-cols-3 lg:mt-12 lg:mb-24 xl:gap-16">
+                <div class="mx-8 mt-8 rounded-2xl overflow-hidden md:w-80 shadow-md transition-transform transform-gpu hover:scale-105 transition-duration-500">
+                    <div style="height: 420px;" class="min-h-96 w-84  lg:h-80 lg:w-72 xl:h-96 xl:w-80">
+                        <div
+                            style=" width: 100%; height: 50%; background-image: url(./image/page7-image-1.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        </div>
+                        <div class="p-6 ">
+                            <h2 class="text-black font-semibold text-2xl font-[roboto]">Headline goes here</h2>
+                            <p class="text-gray-600 text-base font-normal leading-6 mt-4 font-[roboto]">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <h3 class="text-gray-600 text-base font-normal leading-6 mt-8 font-[roboto]">5 Nov, 2021</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-8 mt-8 rounded-2xl overflow-hidden md:w-80 shadow-md transition-transform transform-gpu hover:scale-105 transition-duration-500">
+                    <div style="height: 420px;" class="w-84 ">
+                        <div
+                            style=" width: 100%; height: 50%; background-image: url(./image/page7-image-1.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        </div>
+                        <div class="p-6 ">
+                            <h2 class="text-black font-semibold text-2xl font-[roboto]">Headline goes here</h2>
+                            <p class="text-gray-600 text-base font-normal leading-6 mt-4 font-[roboto]">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <h3 class="text-gray-600 text-base font-normal leading-6 mt-8 font-[roboto]">5 Nov, 2021</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-8 mt-8 rounded-2xl overflow-hidden md:w-80 md:place-items-center shadow-md transition-transform transform-gpu hover:scale-105 transition-duration-500">
+                    <div style="height: 420px;" class="w-84 ">
+                        <div
+                            style=" width: 100%; height: 50%; background-image: url(./image/page7-image-1.png); background-position: center; background-repeat: no-repeat; background-size: cover;">
+                        </div>
+                        <div class="p-6">
+                            <h2 class="text-black font-semibold text-2xl font-[roboto]">Headline goes here</h2>
+                            <p class="text-gray-600 text-base font-normal leading-6 mt-4 font-[roboto]">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor</p>
+                            <h3 class="text-gray-600 text-base font-normal leading-6 mt- font-[roboto]8">5 Nov, 2021</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <div
+            class="page8 mt-20 max-w-screen-2xl mx-auto min-h-96 md:mt-10 md:flex md:items-center md:min-h-80 md:px-8 xl:px-48 lg:px-28 lg:flex lg:justify-between lg:relative lg:gap-24">
+            <div class="p-6 md:w-2/4 lg:w-3/5 md:flex md:flex-col md:justify-center lg:relative lg:pr-20">
+                <h1 class="text-black text-3xl font-bold leading-8 lg:text-4xl font-[roboto]">Get Understand Through Video</h1>
+                <p class="text-gray-600 text-base font-normal leading-6 mt-6 lg:text-base font-[roboto]">Lorem ipsum dolor sit amet,
+                    consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. 
+                </p>
+            </div>
+            <div class="relative md:w-2/4 lg:2/4">
+                <img class="lg:relative" src="./image/page8-image-1.png" alt="Computer" class="w-full h-full">
+                <img src="./image/play.png" alt="Mouse"
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:top-1/2 lg:left-0">
+            </div>
+        </div>
+    </section>
+
+    <section id="card">
+        <div
+            class="page9 flex items-center justify-center max-w-screen-2xl mx-auto h-40 md:z-20 md:relative relative mt-20 md:mt-10 md:mx-10 xl:mx-48 lg:mx-28 lg:z-50">
+            <div
+                class="w-96 h-64 md:w-full lg:w-full lg:h-60 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 bg-white absolute lg:absolute z-10 top-8 rounded-3xl flex flex-col items-center justify-evenly shadow-2xl lg:flex lg:flex-row lg:px-12 xl:px-20 lg:gap-16">
+                <h2 class="text-black text-center text-3xl font-bold leading-tight lg:text-3xl xl:text-4xl font-[roboto]">Let’s create the next
+                    together</h2>
+                <button style="background-color: #01487E;"
+                    class="flex w-332  px-24 py-4 lg:px-16 justify-center items-center gap-10 rounded-lg text-white text-base font-normal leading-none font-[roboto]">CONTACT
+                    US</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="background-color: #01487E;"
+            class="page10 max-w-screen-2xl md:relative mx-auto min-h-full md:min-h-screen lg:min-h-56  z-[-10] relative border-b-2 border-white lg:relative  xl:px-48 lg:px-28 md:pl-2 lg:pb-16 xl:pb-28">
+            <div
+                class="w-64 min-h-screen md:min-h-screen lg:min-h-80 grid grid-cols-1 pt-48 lg:pt-44 xl:pt-56  pl-8 mb-4 md:grid md:grid-cols-1 lg:w-full lg:flex lg:justify-between lg:items-center lg:gap-8 text-2xl">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="241" height="40" viewBox="0 0 241 40" fill="none">
+                        <path d="M59.6562 11.917V33.4234H64.6033V11.917H59.6562Z" fill="white"/>
+                        <path d="M77.2269 17.6316C75.1862 17.6316 73.6403 18.369 72.8054 19.5057V18.0617H68.1675V33.4234H72.8054V25.0359C72.8054 22.8546 73.9804 21.8714 75.6809 21.8714C77.1651 21.8714 78.3709 22.7624 78.3709 24.6673V33.4234H83.0088V23.9913C83.0088 19.8437 80.3498 17.6316 77.2269 17.6316Z" fill="white"/>
+                        <path d="M93.6144 33.8536C96.6445 33.8536 99.2727 32.2867 100.602 29.8902L96.5518 27.586C96.057 28.6613 94.913 29.3065 93.5526 29.3065C91.5428 29.3065 90.0587 27.8625 90.0587 25.7426C90.0587 23.6227 91.5428 22.1787 93.5526 22.1787C94.913 22.1787 96.0261 22.8239 96.5518 23.8992L100.602 21.5642C99.2727 19.1985 96.6136 17.6316 93.6144 17.6316C88.9147 17.6316 85.4208 21.1648 85.4208 25.7426C85.4208 30.3204 88.9147 33.8536 93.6144 33.8536Z" fill="white"/>
+                        <path d="M109.587 33.8536C114.133 33.8536 117.781 30.3204 117.781 25.7426C117.781 21.1648 114.133 17.6316 109.587 17.6316C105.042 17.6316 101.394 21.1648 101.394 25.7426C101.394 30.3204 105.042 33.8536 109.587 33.8536ZM109.587 29.3679C107.578 29.3679 106.032 27.9239 106.032 25.7426C106.032 23.5612 107.578 22.1172 109.587 22.1172C111.597 22.1172 113.143 23.5612 113.143 25.7426C113.143 27.9239 111.597 29.3679 109.587 29.3679Z" fill="white"/>
+                        <path d="M131.752 18.0617V19.6286C130.731 18.369 129.247 17.6316 127.238 17.6316C122.847 17.6316 119.631 21.1955 119.631 25.4353C119.631 29.6752 122.847 33.2391 127.238 33.2391C129.247 33.2391 130.731 32.5017 131.752 31.2421V32.6553C131.752 34.8367 130.422 35.9427 128.258 35.9427C126.217 35.9427 125.321 35.0825 124.733 34.0072L120.775 36.2807C122.198 38.8 124.888 39.9982 128.103 39.9982C132.216 39.9982 136.266 37.8169 136.266 32.6553V18.0617H131.752ZM128.011 28.9993C125.815 28.9993 124.269 27.5553 124.269 25.4353C124.269 23.3154 125.815 21.8714 128.011 21.8714C130.206 21.8714 131.752 23.3154 131.752 25.4353C131.752 27.5553 130.206 28.9993 128.011 28.9993Z" fill="white"/>
+                        <path d="M148.728 17.6316C146.687 17.6316 145.141 18.369 144.306 19.5057V18.0617H139.669V33.4234H144.306V25.0359C144.306 22.8546 145.481 21.8714 147.182 21.8714C148.666 21.8714 149.872 22.7624 149.872 24.6673V33.4234H154.51V23.9913C154.51 19.8437 151.851 17.6316 148.728 17.6316Z" fill="white"/>
+                        <path d="M160.014 16.7099C161.529 16.7099 162.797 15.4502 162.797 13.9448C162.797 12.4393 161.529 11.1797 160.014 11.1797C158.499 11.1797 157.231 12.4393 157.231 13.9448C157.231 15.4502 158.499 16.7099 160.014 16.7099ZM157.695 33.4234H162.333V18.0617H157.695V33.4234Z" fill="white"/>
+                        <path d="M183.041 17.6316C180.846 17.6316 179.424 18.4304 178.558 19.6593C177.692 18.369 176.332 17.6316 174.508 17.6316C172.436 17.6316 171.076 18.4304 170.365 19.475V18.0617H165.727V33.4234H170.365V24.7594C170.365 22.9468 171.23 21.8714 172.776 21.8714C174.26 21.8714 175.002 22.8546 175.002 24.3908V33.4234H179.64V24.7594C179.64 22.9468 180.506 21.8714 182.052 21.8714C183.536 21.8714 184.278 22.8546 184.278 24.3908V33.4234H188.916V23.9913C188.916 20.1509 186.597 17.6316 183.041 17.6316Z" fill="white"/>
+                        <path d="M199.507 33.8536C204.052 33.8536 207.701 30.3204 207.701 25.7426C207.701 21.1648 204.052 17.6316 199.507 17.6316C194.962 17.6316 191.314 21.1648 191.314 25.7426C191.314 30.3204 194.962 33.8536 199.507 33.8536ZM199.507 29.3679C197.497 29.3679 195.951 27.9239 195.951 25.7426C195.951 23.5612 197.497 22.1172 199.507 22.1172C201.517 22.1172 203.063 23.5612 203.063 25.7426C203.063 27.9239 201.517 29.3679 199.507 29.3679Z" fill="white"/>
+                        <path d="M220.311 18.0617V26.4492C220.311 28.6306 219.136 29.6137 217.436 29.6137C215.951 29.6137 214.746 28.7227 214.746 26.8179V18.0617H210.108V27.4938C210.108 31.6415 212.767 33.8536 215.89 33.8536C217.93 33.8536 219.476 33.1162 220.311 31.9794V33.4234H224.949V18.0617H220.311Z" fill="white"/>
+                        <path d="M232.59 22.5473C232.59 21.9943 233.085 21.6871 233.889 21.6871C234.909 21.6871 235.527 22.2401 235.96 23.0389L239.918 20.919C238.619 18.7376 236.393 17.6316 233.889 17.6316C230.673 17.6316 227.828 19.3214 227.828 22.6702C227.828 27.9854 235.435 27.0944 235.435 28.7842C235.435 29.3987 234.878 29.7366 233.765 29.7366C232.404 29.7366 231.539 29.0914 231.137 27.9239L227.117 30.1975C228.323 32.6861 230.673 33.8536 233.765 33.8536C237.104 33.8536 240.196 32.3481 240.196 28.8149C240.196 23.1311 232.59 24.2986 232.59 22.5473Z" fill="white"/>
+                        <path d="M45.4428 4.2139C45.4428 4.2139 40.336 4.2139 33.1279 0C33.1279 0 28.8213 3.14817 20.727 4.16081C20.7738 5.7209 20.4572 7.27251 19.7976 8.71566C19.3091 9.72156 18.6542 10.655 17.8551 11.4841L17.6692 11.6699H8.39176C8.31922 11.6699 6.89575 11.5494 6.17949 12.5069C5.95374 12.8164 5.82744 13.176 5.81455 13.5461C5.78873 13.9819 5.92514 14.413 6.20215 14.7711C6.86629 15.602 8.01549 15.5306 8.10162 15.5245C8.92216 15.4571 9.78123 15.5245 10.595 15.5245H13.1495C14.7158 15.5245 18.5011 15.5102 18.5011 15.5102C18.7751 15.5075 19.0409 15.5944 19.2492 15.7547C19.4576 15.9149 19.5945 16.1378 19.6344 16.3819C19.6484 16.5217 19.6306 16.6626 19.5821 16.796C19.5336 16.9294 19.4554 17.0525 19.3523 17.1578C19.2492 17.2631 19.1234 17.3483 18.9825 17.4083C18.8416 17.4684 18.6886 17.5019 18.5328 17.5069L13.4419 17.6334C12.9461 17.702 12.4965 17.9345 12.1807 18.2855C11.8649 18.6365 11.7056 19.0809 11.7339 19.532C11.7622 19.9831 11.9761 20.4085 12.3338 20.7252C12.6915 21.0419 13.1674 21.2273 13.6686 21.2451C15.9352 21.2287 20.7723 21.2022 20.7723 21.2022C20.9468 21.1844 21.1234 21.2 21.2907 21.2479C21.458 21.2958 21.6122 21.3751 21.7431 21.4804C21.8741 21.5857 21.9789 21.7148 22.0506 21.8591C22.1223 22.0035 22.1594 22.1598 22.1594 22.3179C22.1594 22.4761 22.1223 22.6324 22.0506 22.7767C21.9789 22.9211 21.8741 23.0501 21.7431 23.1555C21.6122 23.2608 21.458 23.34 21.2907 23.388C21.1234 23.4359 20.9468 23.4515 20.7723 23.4337L2.37375 23.3908C2.07964 23.3869 1.78777 23.4374 1.51626 23.5393C1.24475 23.6412 0.999382 23.7923 0.795393 23.9832C0.591403 24.174 0.433142 24.4006 0.330432 24.6489C0.227722 24.8971 0.182755 25.1618 0.19832 25.4263C0.213886 25.6909 0.289653 25.9497 0.420919 26.1868C0.552185 26.4239 0.736149 26.6342 0.961393 26.8046C1.18664 26.9749 1.44835 27.1018 1.7303 27.1773C2.01225 27.2528 2.30842 27.2752 2.60041 27.2433L24.0454 27.1433C24.3217 27.1629 24.5797 27.2756 24.7679 27.4589C24.956 27.6423 25.0605 27.8828 25.0605 28.1325C25.0605 28.3821 24.956 28.6226 24.7679 28.806C24.5797 28.9893 24.3217 29.102 24.0454 29.1216C21.1599 29.0706 15.3822 29.2747 15.3822 29.2747C14.8681 29.2241 14.3515 29.3474 13.9327 29.6205C13.5138 29.8936 13.2226 30.2972 13.1155 30.7529C13.0692 31.0115 13.082 31.2759 13.153 31.53C13.224 31.784 13.3517 32.0224 13.5284 32.2305C13.7052 32.4385 13.9271 32.612 14.1807 32.7402C14.4344 32.8684 14.7144 32.9487 15.0036 32.9762H29.4265L32.8265 36.1734H33.1551C39.9212 31.1632 45.7216 22.5946 48.666 11.2126C48.6388 11.2146 45.5312 10.1101 45.4428 4.2139ZM37.5275 17.0638C37.2765 17.3581 37.1303 17.714 37.1082 18.0846C37.0697 19.9364 37.0946 21.784 37.0901 23.6358C37.0901 25.9122 35.2767 27.6864 32.9829 27.6925C30.689 27.6986 28.9029 25.9796 28.853 23.7379C28.8349 22.8151 28.853 21.9004 28.853 20.9654C28.853 20.5693 28.853 20.1732 28.853 19.7771C28.8961 18.4664 28.7873 17.3272 27.7877 16.1676C26.031 14.1259 26.2441 11.1064 27.901 8.95657C28.6593 7.96527 29.7541 7.22224 31.0211 6.83903C32.288 6.45581 33.6588 6.45308 34.9277 6.83125C37.5049 7.62544 39.3137 9.96309 39.3432 12.609C39.3639 14.2441 38.7179 15.8292 37.5275 17.0638Z" fill="white"/>
+                        <path d="M36.6837 13.1369C36.2661 11.6984 34.9251 10.6952 33.4368 10.6431C31.9156 10.5869 30.5306 11.4998 29.9657 12.9282C29.7144 13.6062 29.682 14.3357 29.8722 15.0301C30.0623 15.7244 30.4672 16.3542 31.0385 16.8445C31.2606 17.0653 31.3945 17.348 31.4188 17.647C31.4693 18.4495 31.4364 19.252 31.4364 20.0545V22.462C31.4364 22.5021 31.4364 22.5443 31.4364 22.5844C31.4891 23.7541 32.3377 24.5445 33.4632 24.4663C34.4195 24.4021 35.1339 23.5895 35.1427 22.4901C35.1603 20.865 35.1427 19.2359 35.1625 17.6089C35.1825 17.3285 35.3075 17.0629 35.5164 16.8565C36.6618 15.8393 37.1124 14.6095 36.6837 13.1369ZM35.6571 14.8803C35.334 14.7238 35.0108 14.5653 34.6701 14.4028C34.8635 13.6946 34.8328 13.0606 34.1447 12.6353C33.9392 12.4876 33.6852 12.4072 33.4236 12.4072C33.162 12.4072 32.9081 12.4876 32.7026 12.6353C32.0805 13.0606 31.8716 13.6505 32.1992 14.3968L31.2033 14.8783C30.9271 14.3975 30.828 13.8482 30.9206 13.312C31.0133 12.7757 31.2928 12.2809 31.7177 11.901C32.1573 11.5088 32.7432 11.2829 33.3578 11.2687C33.9723 11.2546 34.57 11.4532 35.0306 11.8248C35.4842 12.2031 35.7906 12.7058 35.9036 13.257C36.0166 13.8082 35.9301 14.3779 35.6571 14.8803Z" fill="white"/>
+                      </svg>
+                    <p class="text-white opacity-80 text-base font-normal leading-tight mt-6 lg:w-64 font-[roboto]">Lorem ipsum dolor
+                        sit
+                        amet, consectetur adipiscing elit, sed </p>
+                </div>
+                <div class="lg:flex lg:justify-between lg:gap-12 xl:gap-36 ">
+                    <div>
+                        <div class="mt-10">
+                            <h2 class="text-white opacity-60 text-xl font-bold leading-normal font-[roboto]">CONTACT</h2>
+                        </div>
+                        <div class="mt-6">
+                            <div class="flex items-center gap-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <g clip-path="url(#clip0_1750_698)">
+                                      <path d="M20.2063 15.38C18.9763 15.38 17.7863 15.18 16.6763 14.82C16.3263 14.7 15.9363 14.79 15.6663 15.06L14.0963 17.03C11.2663 15.68 8.61629 13.13 7.20629 10.2L9.15629 8.54C9.42629 8.26 9.50629 7.87 9.39629 7.52C9.02629 6.41 8.83629 5.22 8.83629 3.99C8.83629 3.45 8.38629 3 7.84629 3H4.38629C3.84629 3 3.19629 3.24 3.19629 3.99C3.19629 13.28 10.9263 21 20.2063 21C20.9163 21 21.1963 20.37 21.1963 19.82V16.37C21.1963 15.83 20.7463 15.38 20.2063 15.38Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_1750_698">
+                                        <rect width="24" height="24" fill="white" transform="translate(0.196289)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                <h3 class="text-white text-base font-normal leading-none font-[roboto]">+91 9876543210</h3>
+                            </div>
+                            <div class="flex items-center gap-4 mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <g clip-path="url(#clip0_1750_703)">
+                                      <path d="M20.1963 4H4.19629C3.09629 4 2.20629 4.9 2.20629 6L2.19629 18C2.19629 19.1 3.09629 20 4.19629 20H20.1963C21.2963 20 22.1963 19.1 22.1963 18V6C22.1963 4.9 21.2963 4 20.1963 4ZM20.1963 8L12.1963 13L4.19629 8V6L12.1963 11L20.1963 6V8Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_1750_703">
+                                        <rect width="24" height="24" fill="white" transform="translate(0.196289)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                <h3 class="text-white text-base font-normal leading-none font-[roboto]">incognimous@gmail.com</h3>
+                            </div>
+                            <div class="flex items-center gap-4 mt-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                                    <g clip-path="url(#clip0_1750_708)">
+                                      <path d="M12.1963 2C8.32629 2 5.19629 5.13 5.19629 9C5.19629 14.25 12.1963 22 12.1963 22C12.1963 22 19.1963 14.25 19.1963 9C19.1963 5.13 16.0663 2 12.1963 2ZM12.1963 11.5C10.8163 11.5 9.69629 10.38 9.69629 9C9.69629 7.62 10.8163 6.5 12.1963 6.5C13.5763 6.5 14.6963 7.62 14.6963 9C14.6963 10.38 13.5763 11.5 12.1963 11.5Z" fill="white"/>
+                                    </g>
+                                    <defs>
+                                      <clipPath id="clip0_1750_708">
+                                        <rect width="24" height="24" fill="white" transform="translate(0.196289)"/>
+                                      </clipPath>
+                                    </defs>
+                                  </svg>
+                                <h3 class="text-white text-base font-normal leading-none lg:w-44 font-[roboto]">House No-1, Sector-4, City -
+                                    XXXXXX, Country </h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-10">
+                            <h2 class="text-white opacity-60 text-xl font-bold leading-normal font-[roboto]">COMPANY</h2>
+                        </div>
+                        <div class="mt-6">
+                            <h3 class="text-white text-base font-normal leading-none font-[roboto] cursor-pointer">About us</h3>
+                            <h3 class="text-white text-base font-normal leading-none mt-4 font-[roboto]">Resources</h3>
+                            <h3 class="text-white text-base font-normal leading-none mt-4 font-[roboto]">Support</h3>
+                            <h3 class="text-white text-base font-normal leading-none mt-4 font-[roboto]">FAQ</h3>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-10">
+                            <h2 class="text-white opacity-60 text-xl font-bold leading-normal font-[roboto]">SOCIAL</h2>
+                        </div>
+                        <div class="flex gap-8 mt-6 lg:flex lg:flex-col lg:gap-2">
+                            <i class="ri-facebook-fill fb text-white text-2xl "></i>
+                            <i class="ri-linkedin-fill text-white text-2xl"></i>
+                            <i class="ri-instagram-line text-white text-2xl"></i>
+                            <i class="ri-twitter-fill text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer>
+        <div class="page11">
+            <div style="background-color: #01487E;"
+                class="max-w-screen-2xl mx-auto h-20 flex items-center justify-center overflow-x-hidden sm:overflow-x-hidden md:overflow-x-hidden lg:overflow-x-hidden">
+                <h3 class="text-white opacity-60 text-base font-normal leading-normal font-[roboto]">©2020-2022 Incognimous Lab | All
+                    rigts reserved.</h3>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
